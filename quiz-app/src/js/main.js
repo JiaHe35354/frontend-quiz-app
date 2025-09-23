@@ -3,8 +3,6 @@ import "../sass/main.scss";
 import { setColorMode, checkModeChange } from "./theme.js";
 import quizData from "../data/data.json";
 
-const iconCorrect = "/images/icon-correct.svg";
-const iconIncorrect = "/images/icon-incorrect.svg";
 // Initial setup for theme
 setColorMode();
 checkModeChange();
