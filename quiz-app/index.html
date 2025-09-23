@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="src/js/main.js"></script>
+
+    <title>Frontend Mentor | Frontend quiz app</title>
+  </head>
+
+  <body class="light">
+    <div id="app">
+      <div class="background">
+        <picture class="dark-picture">
+          <source
+            srcset="public/images/pattern-background-mobile-dark.svg"
+            media="(max-width: 37.5em)"
+          />
+          <source
+            srcset="public/images/pattern-background-tablet-dark.svg"
+            media="(max-width: 56.25em)"
+          />
+          <img
+            src="public/images/pattern-background-desktop-dark.svg"
+            alt=""
+            class="bg-img"
+          />
+        </picture>
+
+        <picture class="light-picture">
+          <source
+            srcset="public/images/pattern-background-mobile-light.svg"
+            media="(max-width: 37.5em)"
+          />
+          <source
+            srcset="public/images/pattern-background-tablet-light.svg"
+            media="(max-width: 56.25em)"
+          />
+
+          <img
+            src="public/images/pattern-background-desktop-light.svg"
+            alt="Background image"
+            class="bg-img"
+          />
+        </picture>
+      </div>
+
+      <header class="container header">
+        <div class="subject hidden aria-hidden='true'">
+          <div class="icon-wrapper icon-wrapper__accessibility">
+            <img
+              src="public/images/icon-accessibility.svg"
+              alt="Accessibility icon"
+            />
+          </div>
+          <span class="subject-text"></span>
+        </div>
+
+        <fieldset class="toggle" aria-label="theme toggle" role="radiogroup">
+          <label for="light">
+            <img
+              src="images/icon-sun-dark.svg"
+              alt="Light theme icon"
+              class="toggle__icon toggle__icon--dark"
+            />
+            <img
+              src="images/icon-sun-light.svg"
+              alt="Light theme icon"
+              class="toggle__icon toggle__icon--light"
+            />
+            <span class="visually-hidden">Light theme</span></label
+          >
+          <div class="toggle__wrapper">
+            <input type="radio" name="theme" id="light" />
+            <input type="radio" name="theme" id="dark" />
+            <span aria-hidden="true" class="toggle__background"></span>
+            <span aria-hidden="true" class="toggle__button"></span>
+          </div>
+          <label for="dark"
+            ><img
+              src="images/icon-moon-dark.svg"
+              alt="Dark theme icon"
+              class="toggle__icon toggle__icon--dark"
+            />
+            <img
+              src="images/icon-moon-light.svg"
+              alt="Dark theme icon"
+              class="toggle__icon toggle__icon--light"
+            />
+            <span class="visually-hidden">Dark theme</span></label
+          >
+        </fieldset>
+      </header>
+
+      <main>
+        <section id="page-home" class="container row">
+          <div class="col-1-of-2">
+            <h1 class="heading-primary">
+              Welcome to the <span>Frontend Quiz!</span>
+            </h1>
+            <p class="italic-text">Pick a subject to get started.</p>
+          </div>
+
+          <div class="col-2-of-2">
+            <ul class="options-list">
+              <li>
+                <button id="btn-html" class="btn btn-light">
+                  <div class="icon-wrapper icon-wrapper__html">
+                    <img src="public/images/icon-html.svg" alt="HTML icon" />
+                  </div>
+                  HTML
+                </button>
+              </li>
+              <li>
+                <button id="btn-css" class="btn btn-light">
+                  <div class="icon-wrapper icon-wrapper__css">
+                    <img src="public/images/icon-css.svg" alt="CSS icon" />
+                  </div>
+                  CSS
+                </button>
+              </li>
+              <li>
+                <button id="btn-js" class="btn btn-light">
+                  <div class="icon-wrapper icon-wrapper__javascript">
+                    <img
+                      src="public/images/icon-js.svg"
+                      alt="JavaScript icon"
+                    />
+                  </div>
+                  JavaScript
+                </button>
+              </li>
+              <li>
+                <button id="btn-access" class="btn btn-light">
+                  <div class="icon-wrapper icon-wrapper__accessibility">
+                    <img src="public/images/icon-accessibility.svg" alt="" />
+                  </div>
+                  Accessibility
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="page-quiz" class="container row hidden">
+          <div class="col-1-of-2">
+            <label for="progress" class="italic-text"
+              >Question <span class="current">1</span> of
+              <span class="total-question">10</span></label
+            >
+
+            <h2 class="heading-secondary question">
+              What does HTML stand for?
+            </h2>
+            <progress id="progress" value="1" max="10"></progress>
+          </div>
+
+          <div class="col-2-of-2">
+            <ul class="options-list quiz-list">
+              <li>
+                <button class="btn btn-light">
+                  <span class="option-letter">A</span> Hyper Trainer Marking
+                  Language
+                  <!-- <span
+                    ><img
+                      src="public/images/icon-correct.svg"
+                      alt="Correct icon"
+                      class="result-icon"
+                  /></span> -->
+                </button>
+              </li>
+              <li>
+                <button class="btn btn-light">
+                  <span class="option-letter">B</span> Hyper Text Marketing
+                  Language
+                  <!-- <span
+                    ><img
+                      src="public/images/icon-incorrect.svg"
+                      alt="Incorrect icon"
+                      class="result-icon"
+                  /></span> -->
+                </button>
+              </li>
+              <li>
+                <button class="btn btn-light btn-active">
+                  <span class="option-letter">C</span> Hyper Text Markup
+                  Language
+                </button>
+              </li>
+              <li>
+                <button class="btn btn-light">
+                  <span class="option-letter">D</span> Hyper Text Markup Leveler
+                </button>
+              </li>
+            </ul>
+            <button class="btn btn-purple" id="btn-submit">
+              Submit Answer
+            </button>
+            <p class="danger-text">
+              <img
+                src="public/images/icon-incorrect.svg"
+                alt="Incorrect icon"
+              />Please select an answer
+            </p>
+          </div>
+        </section>
+
+        <section id="page-result" class="container row hidden">
+          <div class="col-1-of-2">
+            <h1 class="heading-primary">
+              Quiz completed <span>You scored...</span>
+            </h1>
+          </div>
+
+          <div class="col-2-of-2">
+            <div class="result-container">
+              <div class="subject">
+                <div class="icon-wrapper icon-wrapper__access">
+                  <img
+                    src="public/images/icon-accessibility.svg"
+                    alt="Accessibility icon"
+                  />
+                </div>
+                <span class="subject-text">Accessiblity</span>
+              </div>
+              <p class="result-descrip">
+                <span class="score" id="score">8</span>
+                <span class="description"
+                  >out of <span id="result-total">10</span></span
+                >
+              </p>
+            </div>
+
+            <button class="btn btn-purple" id="btn-play">Play Again</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

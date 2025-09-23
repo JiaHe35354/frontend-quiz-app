@@ -1,0 +1,101 @@
+@use "sass:color";
+@use "../util" as *;
+
+.btn {
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: inherit;
+  width: 100%;
+  min-height: 10rem;
+  height: auto;
+  padding: 2.4rem;
+  text-align: left;
+  border-radius: 2.4rem;
+  box-shadow: var(--shadow);
+  border: 3px solid transparent;
+  cursor: pointer;
+
+  @include respond(tab-port) {
+    min-height: 8.8rem;
+    padding: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.8rem;
+    min-height: 7.2rem;
+    border-radius: 1.5rem;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.8;
+  }
+
+  &.btn-active {
+    border-color: var(--color-purple);
+    outline: none;
+
+    & .option-letter {
+      background-color: var(--color-purple);
+      color: var(--dark-text1);
+    }
+  }
+
+  &.btn-light {
+    background: var(--background-btn);
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    transition: all 0.1s ease-in-out;
+
+    @include respond(phone) {
+      gap: 1.6rem;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-purple);
+      outline: none;
+    }
+
+    .answer-text {
+      flex: 1;
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+}
+
+.btn-purple {
+  height: 9rem;
+  letter-spacing: 0.5px;
+  background-color: var(--color-purple);
+  color: var(--dark-text1);
+  text-align: center;
+  margin-top: 3.2rem;
+  transition: all 0.05s ease-in-out;
+
+  &.btn-inactive {
+    background-color: color.adjust(hsl(277, 91%, 56%), $lightness: 20%);
+    cursor: not-allowed;
+    outline: none;
+  }
+
+  &:focus {
+    outline: 3px solid var(--dark-text1);
+  }
+
+  @include respond(tab-port) {
+    background-color: var(--color-purple);
+  }
+
+  @include respond(phone) {
+    height: 5.6rem;
+    margin-top: 1.6rem;
+  }
+}

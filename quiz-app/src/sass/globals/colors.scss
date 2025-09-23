@@ -1,0 +1,59 @@
+:root {
+  --light-bg: #ecf0f9;
+  --light-text1: #303d50;
+  --light-text2: #626c7f;
+
+  --dark-bg: #334154;
+  --dark-bg2: rgb(59, 77, 102);
+  --dark-text1: #ffffff;
+  --dark-text2: #abc1e1;
+
+  --color-purple: hsl(277, 91%, 56%);
+  --color-green: hsl(151, 68%, 52%);
+  --color-red: hsl(0, 82%, 63%);
+
+  --html-bg: #fff5ed;
+  --css-bg: #e0fdef;
+  --js-bg: #ebf0ff;
+  --access-bg: #f6e7ff;
+
+  --shadow-color: rgba(220, 228, 249, 0.9);
+  --grey-light: #f4f6fa;
+  --color-shadow-light: rgba(220, 228, 249, 0.9);
+  --color-shadow-dark: rgba(52, 68, 93, 0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-bg);
+    --background-btn: var(--dark-text2);
+    --text-color: var(--dark-text1);
+    --text-color2: var(--dark-text2);
+    --icon-color: var(--dark-text1);
+    --progress-color: var(--dark-bg2);
+    --danger-color: var(--grey-light);
+    --shadow: 0 1rem 2rem var(--color-shadow-dark);
+  }
+}
+
+body.light {
+  --background: var(--light-bg);
+  --background-btn: var(--dark-text1);
+  --text-color: var(--light-text1);
+  --text-color2: var(--light-text2);
+  --icon-color: var(--light-text2);
+  --progress-color: var(--dark-text1);
+  --danger-color: var(--color-red);
+  --shadow: 0 1rem 2rem var(--color-shadow-light);
+}
+
+body.dark {
+  --background: var(--dark-bg);
+  --background-btn: var(--dark-bg2);
+  --text-color: var(--dark-text1);
+  --text-color2: var(--dark-text2);
+  --icon-color: var(--dark-text1);
+  --progress-color: var(--dark-bg2);
+  --danger-color: var(--grey-light);
+  --shadow: 0 1rem 2rem var(--color-shadow-dark);
+}

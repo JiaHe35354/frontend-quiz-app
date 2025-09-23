@@ -1,0 +1,39 @@
+@use "../util" as *;
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.96);
+  z-index: -1;
+
+  .bg-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    @include respond(tab-port) {
+      width: auto;
+      height: auto;
+      object-fit: none;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+}
+
+body.light .dark-picture,
+body.light .toggle__icon--light {
+  display: none;
+}
+
+body.dark .light-picture,
+body.dark .toggle__icon--dark {
+  display: none;
+}

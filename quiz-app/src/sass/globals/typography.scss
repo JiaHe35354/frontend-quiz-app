@@ -1,0 +1,41 @@
+@use "../util" as *;
+
+.heading-primary {
+  font-size: 6.4rem;
+  font-weight: 300;
+  margin-bottom: 4.8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+
+  span {
+    display: block;
+    font-weight: 500;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-top: 2.4rem;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.italic-text {
+  font-size: 2rem;
+  color: var(--text-color2);
+  font-style: italic;
+  line-height: 1.5;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+}

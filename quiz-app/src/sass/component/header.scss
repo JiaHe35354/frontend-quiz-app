@@ -1,0 +1,21 @@
+@use "../util" as *;
+
+.container.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+
+  @include respond(tab-port) {
+    margin-top: 5rem;
+  }
+  @include respond(phone) {
+    margin-top: 2rem;
+  }
+
+  .subject.hidden {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
