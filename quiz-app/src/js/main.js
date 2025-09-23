@@ -3,6 +3,8 @@ import "../sass/main.scss";
 import { setColorMode, checkModeChange } from "./theme.js";
 import quizData from "../data/data.json";
 
+const iconCorrect = "/images/icon-correct.svg";
+const iconIncorrect = "/images/icon-incorrect.svg";
 // Initial setup for theme
 setColorMode();
 checkModeChange();
@@ -142,7 +144,7 @@ submitBtn.addEventListener("click", () => {
     selectedBtn.insertAdjacentHTML(
       "beforeend",
       ` <span class="result-icon">
-          <img src="public/images/icon-correct.svg" alt="Correct icon" />
+          <img src="/images/icon-correct.svg" alt="Correct icon" />
         </span>`
     );
 
@@ -153,7 +155,7 @@ submitBtn.addEventListener("click", () => {
     selectedBtn.insertAdjacentHTML(
       "beforeend",
       ` <span class="result-icon">
-          <img src="public/images/icon-incorrect.svg" alt="Correct icon" />
+          <img src="/images/icon-incorrect.svg" alt="Correct icon" />
         </span>`
     );
   }
