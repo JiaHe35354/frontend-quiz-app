@@ -87,7 +87,8 @@
   }
 
   &:focus {
-    outline: 3px solid var(--dark-text1);
+    outline: 3px solid var(--text-color2);
+    offset: 3px;
   }
 
   @include respond(tab-port) {

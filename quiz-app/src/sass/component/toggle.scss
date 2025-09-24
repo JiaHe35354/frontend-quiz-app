@@ -24,7 +24,8 @@
   }
 
   &__icon {
-    color: var(--icon-color);
+    width: 2.4rem;
+    height: 2.4rem;
 
     @include respond(phone) {
       width: 1.6rem;
@@ -62,7 +63,8 @@
     }
 
     &:focus ~ .toggle__button {
-      border: 2px solid white;
+      outline: 2px solid white;
+      outline-offset: 1px;
     }
   }
 
@@ -79,8 +81,8 @@
 
   &__button {
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 0.4rem;
+    left: 0.4rem;
     right: 100%;
     width: 2rem;
     height: 2rem;
@@ -89,19 +91,29 @@
     transition: all 0.15s ease-in-out;
 
     @include respond(phone) {
-      left: 3px;
+      left: 0.3rem;
       width: 1.2rem;
       height: 1.2rem;
-      top: 4px;
+      top: 0.4rem;
     }
   }
 
   #dark:checked ~ .toggle__button {
-    left: calc(100% - 24px);
-    right: 4px;
+    left: calc(100% - 2.4rem);
+    right: 0.4rem;
 
     @include respond(phone) {
-      left: calc(100% - 15px);
+      left: calc(100% - 1.5rem);
     }
   }
+}
+
+body.light .dark-picture,
+body.light .toggle__icon--light {
+  display: none;
+}
+
+body.dark .light-picture,
+body.dark .toggle__icon--dark {
+  display: none;
 }

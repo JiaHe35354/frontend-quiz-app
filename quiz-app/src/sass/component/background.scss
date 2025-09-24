@@ -27,13 +27,3 @@
     }
   }
 }
-
-body.light .dark-picture,
-body.light .toggle__icon--light {
-  display: none;
-}
-
-body.dark .light-picture,
-body.dark .toggle__icon--dark {
-  display: none;
-}
