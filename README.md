@@ -35,12 +35,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot light theme](./screenshot-light-png)
-![Screenshot dark theme](./screenshot-dark-png)
+![Screenshot light theme](./screenshot-light.png)
+![Screenshot dark theme](./screenshot-dark.png)
 
 ### Links
 
-- Solution URL: [My solution]()
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/frontend-quiz-app-with-scss-and-javascript-aY7ihgsfN3)
 - Live Site URL: [Live site URL](https://frontend-quiz-app.netlify.app/)
 
 ## My process

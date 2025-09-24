@@ -106,6 +106,7 @@ function loadQuestion() {
   selectedAnswer = null;
   dangerText.style.display = "none";
   submitBtn.classList.add("btn-inactive");
+  submitBtn.disabled = false;
 }
 
 function selectAnswer(button, answer) {
@@ -117,6 +118,7 @@ function selectAnswer(button, answer) {
   selectedAnswer = answer;
 
   submitBtn.classList.remove("btn-inactive");
+  submitBtn.disabled = false;
 }
 
 submitBtn.addEventListener("click", () => {
@@ -124,6 +126,9 @@ submitBtn.addEventListener("click", () => {
     dangerText.style.display = "flex";
     return;
   }
+
+  submitBtn.disabled = true;
+  submitBtn.classList.add("btn-inactive");
 
   const q = currentQuiz.questions[currentQuestionIndex];
   const buttons = quizList.querySelectorAll("button");
