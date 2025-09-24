@@ -114,6 +114,7 @@ function selectAnswer(button, answer) {
     btn.classList.remove("btn-active");
   });
 
+  dangerText.style.display = "none";
   button.classList.add("btn-active");
   selectedAnswer = answer;
 
